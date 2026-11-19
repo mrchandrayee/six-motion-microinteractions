@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070d1b"><title>Six Motion Micro-interactions</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+  <header class="top"><div class="brand"><span class="brand-dot"></span>MOTION / INTERFACE <small>MICRO-INTERACTION STUDY</small></div><span class="top-note">SIX MOTION PRINCIPLES</span></header>
+  <section class="hero"><p class="eyebrow">A SIX-PART INTERACTIVE BUILD</p><h1>Small motion.<br><em>Big difference.</em></h1><p>Explore six interface details from the video. Trigger each interaction and see how timing, easing and movement make an interface feel responsive.</p></section>
+
+  <section class="demo" id="bottom-sheet">
+    <div class="demo-head"><div><span class="eyebrow">01 · BOTTOM SHEET</span><h2>Follow, then <em>snap.</em></h2><p>Drag the sheet handle or choose a ride. It follows your finger, then settles with a small overshoot.</p></div><span class="number">01 / 06</span></div>
+    <div class="demo-panel sheet-panel">
+      <div class="sheet-backdrop"></div>
+      <div class="sheet">
+        <button class="grabber" id="grabber" aria-label="Drag bottom sheet"><i></i></button>
+        <h3>Choose a ride</h3>
+        <button class="ride selected" data-price="$14"><span class="ride-dot blue"></span>Comfort <b>$14</b></button>
+        <button class="ride" data-price="$21"><span class="ride-dot yellow"></span>XL <b>$21</b></button>
+      </div>
+      <div class="sheet-state" id="sheetState">SHEET HEIGHT · 146 PX</div>
+    </div>
+    <div class="spec">SNAPS TO 146 PX · OVERSHOOTS 7 PX</div>
+  </section>
+
+  <section class="demo" id="tooltip">
+    <div class="demo-head"><div><span class="eyebrow">02 · TOOLTIP</span><h2>Grow from the <em>arrow.</em></h2><p>The tooltip scales out from its pointer, not from its center.</p></div><span class="number">02 / 06</span></div>
+    <div class="demo-panel security">
+      <h3>Security</h3><div class="security-row"><span>Two-step login</span><button class="info" id="infoButton" aria-label="More information">i</button><label class="switch"><input type="checkbox" checked><span></span></label></div>
+      <div class="tooltip" id="tooltipBox" role="status">A code goes to your phone</div>
+    </div>
+    <div class="spec">SCALE 50% → 100% · FROM THE ARROW</div>
+  </section>
+
+  <section class="demo" id="typing">
+    <div class="demo-head"><div><span class="eyebrow">03 · TYPING DOTS</span><h2>Wave, don't <em>blink.</em></h2><p>Three dots lift one after another, with 100ms between each.</p></div><span class="number">03 / 06</span></div>
+    <div class="demo-panel chat">
+      <div class="bubble">Where are you?</div>
+      <div class="typing-line"><div class="avatar"></div><div class="typing-bubble"><i></i><i></i><i></i></div></div>
+      <button class="small-action" id="typingReplay">Replay typing</button>
+    </div>
+    <div class="spec">3 DOTS · 100 MS APART</div>
+  </section>
+
+  <section class="demo" id="toast">
+    <div class="demo-head"><div><span class="eyebrow">04 · TOAST</span><h2>Slide in, stack <em>up.</em></h2><p>A new confirmation slides upward; the previous toast steps back slightly.</p></div><span class="number">04 / 06</span></div>
+    <div class="demo-panel editor">
+      <div class="editor-top"><div><h3>Draft.md</h3><div class="skeleton"></div><div class="skeleton short"></div></div><button class="save" id="saveButton">Save</button></div>
+      <div class="toast-stack"><div class="toast old-toast">✓ &nbsp; Photo uploaded</div><div class="toast new-toast" id="saveToast">✓ &nbsp; Changes saved</div></div>
+    </div>
+    <div class="spec">SLIDES 64 PX · OLD ONE → 92%</div>
+  </section>
+
+  <section class="demo" id="file-drop">
+    <div class="demo-head"><div><span class="eyebrow">05 · FILE DROP</span><h2>Lift, then <em>land.</em></h2><p>Files lift while being dragged, then settle smaller in the drop zone.</p></div><span class="number">05 / 06</span></div>
+    <div class="demo-panel drop-layout">
+      <div class="file-stack" id="fileStack" draggable="true" aria-label="Draggable demo file"><div class="file-icon"><span></span></div><small>Draft.pdf</small></div>
+      <label class="drop-zone" id="dropZone"><input id="fileInput" type="file" accept=".pdf,.png,.jpg,.jpeg,.txt"><span class="upload-arrow">↑</span><b>Drop files here</b><small>or click to choose a file</small></label>
+      <div class="upload-success" id="uploadSuccess" hidden><span>✓</span><b id="uploadName">Uploaded</b></div>
+    </div>
+    <div class="spec">LIFTS TO 110% · LANDS AT 55%</div>
+  </section>
+
+  <section class="demo" id="payment">
+    <div class="demo-head"><div><span class="eyebrow">06 · PAYMENT</span><h2>Burst on the <em>win.</em></h2><p>On success, the button changes state and 18 confetti pieces burst outward.</p></div><span class="number">06 / 06</span></div>
+    <div class="demo-panel payment">
+      <span class="total-label">Total</span><strong class="amount">$24.00</strong>
+      <button class="pay-button" id="payButton">Pay $24</button>
+      <div class="confetti" id="confetti" aria-hidden="true"></div>
+      <p class="pay-note" id="payNote">Demo only · no real payment is processed</p>
+    </div>
+    <div class="spec">18 PIECES · PEAK AT 460 MS</div>
+  </section>
+  <footer><span>INTERACTIVE MOTION STUDY</span><span>BUILT FROM SIX PRINCIPLES</span></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
